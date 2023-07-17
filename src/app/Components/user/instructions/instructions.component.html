@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card class="mt-4">
+                <mat-card-title>
+                    <h2 class="mt-2 mx-2 text-center">!! Read the instructions of this page carefully !!</h2>
+                </mat-card-title>
+                <mat-card-content>
+                    <h1>{{quizzes.title}}</h1>
+                    <p>{{quizzes.description}}</p>
+                    <mat-divider></mat-divider>
+
+                    <h2 class="mt-2">Important Instructions:</h2>
+                    <marquee behavior="" direction="up" scrollamount="3">
+                        <ul class="text-danger">
+                            <li>This quiz is only for Exam purpose.</li>
+                            <li>Read carefully all questions and give answer.</li>
+                            <li>You have to submit quiz with in 6 minutes.</li>
+                            <li>You can attempt the quiz any number of time.</li>
+                            <li>There are <b>{{quizzes.numberOfQuestions}}</b> questions in the quiz.</li>
+                            <li>Each questions carries <b>{{quizzes.maxMarks / quizzes.numberOfQuestions}}</b> Marks, No negative Marking for wrong one.</li>
+                            <li>All questions is of MCQ Types.</li>
+                        </ul>
+                    </marquee>
+                    <mat-divider></mat-divider>
+
+                    <h2 class="mt-2">Attempting Quiz</h2>
+
+                    <marquee behavior="" direction="up" scrollamount="3">
+                        <ul class="text-danger">
+                            <li>Click Start Quiz button to start the quiz</li>
+                            <li>The time will start the moment ou click the Start Test button</li>
+                            <li>You can not resume this quiz, if interrupted due to any reason</li>
+                            <li>Scroll down to move to next question.</li>
+                            <li>Click on Submit quiz button on complete of the quiz.</li>
+                            <li>Report of the test is automatically generated in the form of PDF copy.</li>
+                        </ul>
+                    </marquee>
+                </mat-card-content>
+                <div class="container">
+                    <button class="btn btn-primary mt-4 mb-3" (click)="startExam()">Start Exam</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

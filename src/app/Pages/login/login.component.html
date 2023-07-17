@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+    <div class="col-md-5 mt-5">
+            <form class="p-4" [formGroup]="login" (ngSubmit)="loginAcc()">
+                <div class="container text-center mb-4 mx-4">
+                    <img src="assets\Images\Career_Logo.png" alt="Image not available">
+                </div>
+                <mat-form-field appearance="outline" style="width: 550px;">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput formControlName="username" placeholder="Enter Username...">
+                </mat-form-field>
+                    
+                <mat-form-field appearance="outline" style="width: 550px;">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Enter Password...">
+                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                   </button>
+                </mat-form-field>
+                <div class="row justify-content-center">
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

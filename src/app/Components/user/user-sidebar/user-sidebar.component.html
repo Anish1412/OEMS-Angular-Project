@@ -1,0 +1,11 @@
+<mat-card class="mt-4" >
+    <mat-action-list >
+        <!-- After localhost & port number copy everything with '/' till end to give in "routerLink"-->
+        <!-- For e.g. http://localhost:4200/admin-dashboard -->
+        <button routerLink="/user-dashboard" mat-list-item><mat-icon matListItemIcon class="text-dark">home</mat-icon> Home</button>
+        <button routerLink="/user-dashboard/user-profile" mat-list-item><mat-icon matListItemIcon class="text-dark">account_circle</mat-icon> Profile</button>
+        <button [routerLink]="'/user-dashboard/'+0" mat-list-item><mat-icon matListItemIcon class="text-dark">quizzes</mat-icon> All Quiz</button>
+        <button [routerLink]="'/user-dashboard/'+c.category_id" mat-list-item *ngFor="let c of categoryData"><mat-icon matListItemIcon class="text-dark">category</mat-icon> {{c.title}}</button>
+        <button mat-list-item routerLink="/signin" (click)="logout()"><mat-icon matListItemIcon class="text-dark">logout</mat-icon> Logout</button>
+    </mat-action-list>
+</mat-card>

@@ -1,0 +1,46 @@
+<mat-card class="mt-4">
+    <mat-card-content>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png" class="mt-4" alt="Image not available">
+                    <h1 class="fw-semibold mt-2">{{userData.firstname | uppercase}} {{userData.lastname | uppercase}}</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <table class="table table-bordered mt-4">
+                                <thead>
+                                    <tr>
+                                        <th>User Name</th>
+                                        <td>{{userData.username}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <td>{{userData.id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>User Role</th>
+                                        <td>{{userData.authorities[0].authority}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>User Status</th>
+                                        <td>{{userData.enabled}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>User Phone No</th>
+                                        <td>{{userData.phone}}</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-4 mb-4">
+                    <button mat-raised-button color="primary" class="mx-2">Update</button>
+                    <button mat-raised-button color="warn">Share</button>
+                </div>
+            </div>
+        </div>        
+    </mat-card-content>
+</mat-card>

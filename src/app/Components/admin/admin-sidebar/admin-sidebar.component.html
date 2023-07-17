@@ -1,0 +1,13 @@
+<mat-card class="mt-4">
+    <mat-action-list>
+        <!-- After localhost & port number copy everything with '/' till end to give in "routerLink"-->
+        <!-- For e.g. http://localhost:4200/admin-dashboard -->
+        <button routerLink="/admin-dashboard" mat-list-item><mat-icon matListItemIcon class="text-dark">home</mat-icon> Home</button>
+        <button routerLink="/admin-dashboard/admin-profile" mat-list-item><mat-icon matListItemIcon class="text-dark">account_circle</mat-icon> Profile</button>
+        <button routerLink="/admin-dashboard/all-category" mat-list-item><mat-icon matListItemIcon class="text-dark">category</mat-icon> Category</button>
+        <button routerLink="/admin-dashboard/add-category" mat-list-item><mat-icon matListItemIcon class="text-dark">add_circle_outline</mat-icon> Add Category</button>
+        <button mat-list-item routerLink="/admin-dashboard/all-quiz"><mat-icon matListItemIcon class="text-dark">quizzes</mat-icon> Quizz</button>
+        <button mat-list-item routerLink="/admin-dashboard/add-quiz"><mat-icon matListItemIcon class="text-dark">add</mat-icon> Add Quiz</button>
+        <button mat-list-item routerLink="/signin" (click)="logout()"><mat-icon matListItemIcon class="text-dark">logout</mat-icon> Logout</button>
+    </mat-action-list>
+</mat-card>

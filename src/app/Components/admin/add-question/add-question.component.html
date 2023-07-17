@@ -1,0 +1,43 @@
+<mat-card class="mt-4">
+    <h1 class="text-center mt-5">Add New Question</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <!-- If we give class "row" in form tag then, the "mat-form-field" will take space -->
+            <!-- According to the typography like col-md-10, col-md-6 -->
+            <form class="row" [formGroup]="AddQuestionForm" (ngSubmit)="addQuestion()">
+            <mat-form-field appearance="outline">
+                <mat-label>Question</mat-label>
+                <input type="text" name="" id="" formControlName="content" matInput placeholder="Enter Question here...">
+            </mat-form-field>
+            <mat-form-field class="col-md-6" appearance="outline">
+                <mat-label>Option A:</mat-label>
+                <input type="text" name="" id="" formControlName="option1" [(ngModel)]="AddQuestion.option1" matInput placeholder="Enter Option A...">
+            </mat-form-field>
+            <mat-form-field class="col-md-6" appearance="outline">
+                <mat-label>Option B:</mat-label>
+                <input type="text" name="" id="" formControlName="option2" [(ngModel)]="AddQuestion.option2" matInput placeholder="Enter Option B...">
+            </mat-form-field>
+            <mat-form-field class="col-md-6" appearance="outline">
+                <mat-label>Option C:</mat-label>
+                <input type="text" name="" id="" formControlName="option3" [(ngModel)]="AddQuestion.option3" matInput placeholder="Enter Option C...">
+            </mat-form-field>
+            <mat-form-field class="col-md-6" appearance="outline">
+                <mat-label>Option D:</mat-label>
+                <input type="text" name="" id="" formControlName="option4" [(ngModel)]="AddQuestion.option4" matInput placeholder="Enter Option D...">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Answer</mat-label>
+                <mat-select formControlName="answer">
+                    <mat-option *ngIf="AddQuestion.option1" [value]="AddQuestion.option1">{{AddQuestion.option1}}</mat-option>
+                    <mat-option *ngIf="AddQuestion.option2" [value]="AddQuestion.option2">{{AddQuestion.option2}}</mat-option>
+                    <mat-option *ngIf="AddQuestion.option3" [value]="AddQuestion.option3">{{AddQuestion.option3}}</mat-option>
+                    <mat-option *ngIf="AddQuestion.option4" [value]="AddQuestion.option4">{{AddQuestion.option4}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="container text-center mb-5">
+                <button mat-raised-button color="primary">Add Question</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</mat-card>

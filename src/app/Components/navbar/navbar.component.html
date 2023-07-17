@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" style="height: 80px;">
+    <button mat-icon-button class="example-icon" >
+      <mat-icon>school</mat-icon>
+    </button>
+    <a routerLink="" class="navbar-brand fw-semibold">OEMS</a>
+    <span class="example-spacer"></span>
+    <!-- <div *ngIf="token; else f2"> -->
+      <a *ngIf="isLoggedIn && user" mat-button class="fs-5">{{user.username}}</a>
+      <a *ngIf="isLoggedIn" routerLink="signup" mat-button class="fs-5" (click)="logout()">Sign-out</a>
+    <!-- </div> -->
+    <!-- <ng-template #f2> -->
+      <a *ngIf="!isLoggedIn" routerLink="signin" mat-button class="fs-5">Sign-in</a>
+      <a *ngIf="!isLoggedIn" routerLink="signup" mat-button class="fs-5 mx-2">Sign-up</a>
+    <!-- </ng-template> -->
+  </mat-toolbar>

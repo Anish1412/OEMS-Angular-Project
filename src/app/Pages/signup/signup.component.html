@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-md-6 mt-5">
+        <mat-card>
+            <div class="alert text-center p-4" style="background-color:lightgreen; color:green">
+                <p class="fs-5 mt-2">Register Your Self Here..</p>
+            </div>
+            <form class="p-3" [formGroup]="Register" (ngSubmit)="Signup()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline" style="width: 330px;">
+                            <mat-label>First Name</mat-label>
+                            <input type="text" name="" formControlName="firstname" id="" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" style="width: 330px;">
+                            <mat-label>User Name</mat-label>
+                            <input type="text" name="" formControlName="username" id="" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline" style="width: 330px;">
+                            <mat-label>Last Name</mat-label>
+                            <input type="text" name="" formControlName="lastname" id="" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" style="width: 330px;">
+                            <mat-label>User Password</mat-label>
+                            <input type="password" name="" formControlName="password" id="" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" style="width: 690px;">
+                        <mat-label>Email ID</mat-label>
+                        <input type="email" name="" id="" formControlName="email" matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 690px;">
+                        <mat-label>Contact No</mat-label>
+                        <input type="number" name="" id="" formControlName="phone" matInput>
+                    </mat-form-field>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary mx-1">Register</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>
